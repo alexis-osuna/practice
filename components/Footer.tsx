@@ -1,8 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
+import animations from "../lib/animations";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="absolute bottom-0 flex items-center justify-between w-full h-16 px-48">
+    <motion.footer
+      initial="initial"
+      animate="animate"
+      variants={animations.fadeIn}
+      className="absolute bottom-0 flex items-center justify-between w-full h-16 px-48"
+    >
       <p className="text-sm">© {new Date().getFullYear()} Alexis Osuna.</p>
       <div className="space-x-8 text-sm underline-offset-4">
         <a
@@ -22,7 +29,7 @@ const Footer: React.FC = () => {
           Alexis
         </a>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 interface Props {
@@ -10,6 +11,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className="relative w-screen h-screen">
       {children}
+      <Nav />
       <Footer />
     </div>
   );
