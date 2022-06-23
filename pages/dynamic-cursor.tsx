@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 
 import Heading from "../components/Heading";
+import Container from "../components/Container";
 
 const DynamicCursor: NextPage = () => {
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    <Container>
       <Heading message="Dynamic Cursor" />
-    </div>
+    </Container>
   );
 };
 

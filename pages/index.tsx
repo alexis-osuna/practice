@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 
 import Heading from "../components/Heading";
+import Container from "../components/Container";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    <Container>
       <Heading message="Front-End exercises using Framer Motion." />
-    </div>
+    </Container>
   );
 };
 

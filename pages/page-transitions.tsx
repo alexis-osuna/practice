@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 
 import Heading from "../components/Heading";
+import Container from "../components/Container";
 
 const PageTransitions: NextPage = () => {
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    <Container>
       <Heading message="Page Transitions" />
-    </div>
+    </Container>
   );
 };
 
