@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 
 import Heading from "../components/Heading";
 
-const Home: NextPage = () => {
+const PageTransitions: NextPage = () => {
   return (
     <div className="flex items-center justify-center w-full h-full">
-      <Heading message="Front-End exercises using Framer Motion." />
+      <Heading message="Page Transitions" />
     </div>
   );
 };
 
-export default Home;
+export default PageTransitions;

@@ -2,7 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import animations from "../lib/animations";
 
-const Heading: React.FC = () => {
+interface Props {
+  message: string;
+}
+
+const Heading: React.FC<Props> = ({ message }) => {
   return (
     <motion.h1
       initial="initial"
@@ -10,7 +14,7 @@ const Heading: React.FC = () => {
       variants={animations.fadeInUp}
       className="max-w-sm text-3xl font-bold text-center"
     >
-      Front-End exercises using Framer Motion.
+      {message}
     </motion.h1>
   );
 };
