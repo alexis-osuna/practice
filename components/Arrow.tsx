@@ -47,8 +47,9 @@ const Arrow: React.FC<Props> = ({ isActive, right }) => {
         <motion.div
           animate={isActive ? "active" : "inactive"}
           variants={animations.arrowRight}
+          className="px-4 hover:text-neutral-400"
         >
-          <HiOutlineArrowNarrowRight className="text-xl hover:text-neutral-400" />
+          <HiOutlineArrowNarrowRight className="text-xl" />
         </motion.div>
       </Link>
     );
@@ -58,8 +59,9 @@ const Arrow: React.FC<Props> = ({ isActive, right }) => {
       <motion.div
         animate={isActive ? "active" : "inactive"}
         variants={animations.arrowLeft}
+        className="px-4 hover:text-neutral-400"
       >
-        <HiOutlineArrowNarrowLeft className="text-xl hover:text-neutral-400" />
+        <HiOutlineArrowNarrowLeft className="text-xl" />
       </motion.div>
     </Link>
   );
