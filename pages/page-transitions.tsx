@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 
-import Heading from "../components/Heading";
 import Container from "../components/Container";
 
 const PageTransitions: NextPage = () => {
   return (
     <Container>
-      <Heading message="Page Transitions" />
+      <h1 className="max-w-sm text-3xl font-bold text-center">
+        Page Transitions
+      </h1>
     </Container>
   );
 };

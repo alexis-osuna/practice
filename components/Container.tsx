@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import animations from "../lib/animations";
 
 interface Props {
   children: React.ReactNode;
@@ -6,9 +8,14 @@ interface Props {
 
 const Container: React.FC<Props> = ({ children }) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full overflow-auto">
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={animations.fadeInUp}
+      className="flex flex-col items-center justify-center invisible w-full h-full overflow-auto lg:visible"
+    >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

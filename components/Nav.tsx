@@ -8,7 +8,7 @@ const Nav: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <nav className="absolute flex justify-center w-full h-8 bottom-24">
+    <nav className="absolute justify-center hidden w-full h-8 bottom-24 lg:flex mix-blend-exclusion">
       <motion.div
         initial="initial"
         animate="animate"
