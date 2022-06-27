@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 
-import Container from "../components/Container";
+import Heading from "../components/Heading";
 
 const DynamicCursor: NextPage = () => {
   return (
-    <Container>
-      <h1 className="max-w-sm text-3xl font-bold text-center">
-        Dynamic Cursor
-      </h1>
-    </Container>
+    <>
+      <Head>
+        <title>Dynamic Cursor</title>
+      </Head>
+      <Heading text="Dynamic Cursor" />
+    </>
   );
 };
 

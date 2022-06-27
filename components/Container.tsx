@@ -11,7 +11,8 @@ const Container: React.FC<Props> = ({ children }) => {
     <motion.div
       initial="initial"
       animate="animate"
-      variants={animations.fadeInUp}
+      exit="exit"
+      variants={animations.fadeInOut}
       className="flex flex-col items-center justify-center invisible w-full h-full overflow-auto lg:visible"
     >
       {children}

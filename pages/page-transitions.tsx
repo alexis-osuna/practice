@@ -1,14 +1,34 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 
-import Container from "../components/Container";
+import Mugshots from "../components/Mugshots";
 
-const PageTransitions: NextPage = () => {
+import { content } from "../data/content";
+
+export async function getStaticProps() {
+  return {
+    props: {
+      mugshots: content.mugshots,
+    },
+  };
+}
+
+interface Props {
+  mugshots: {
+    name: string;
+    image: string;
+    slug: string;
+  }[];
+}
+
+const PageTransitions: NextPage<Props> = ({ mugshots }) => {
   return (
-    <Container>
-      <h1 className="max-w-sm text-3xl font-bold text-center">
-        Page Transitions
-      </h1>
-    </Container>
+    <>
+      <Head>
+        <title>Page Transitions</title>
+      </Head>
+      <Mugshots mugshots={mugshots} />
+    </>
   );
 };
 

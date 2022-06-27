@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 
-import Container from "../components/Container";
+import Heading from "../components/Heading";
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <h1 className="max-w-sm text-3xl font-bold text-center">
-        Front-End exercises using Framer Motion.
-      </h1>
-    </Container>
+    <>
+      <Head>
+        <title>Alexis Osuna | Practice</title>
+      </Head>
+      <Heading text="Front-End exercises using Tailwind and Framer Motion." />
+    </>
   );
 };
 
