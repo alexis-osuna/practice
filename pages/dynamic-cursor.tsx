@@ -1,15 +1,21 @@
+import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import Heading from "../components/Heading";
+import Cursor from "../components/Cursor";
+import ABC from "../components/ABC";
 
 const DynamicCursor: NextPage = () => {
+  const [isActive, setIsActive] = useState<boolean>();
+  const [image, setImage] = useState<number>();
+
   return (
     <>
       <Head>
         <title>Dynamic Cursor</title>
       </Head>
-      <Heading text="Dynamic Cursor" />
+      <Cursor isActive={isActive} image={image} />
+      <ABC setIsActive={setIsActive} setImage={setImage} />
     </>
   );
 };
