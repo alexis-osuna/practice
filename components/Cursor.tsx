@@ -1,18 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 
-const images = [
-  "/lindsay-lohan.png",
-  "/mischa-barton.png",
-  "/paris-hilton.png",
-];
+const videos = ["/a.mp4", "/b.mp4", "/c.mp4"];
 
 interface Props {
   isActive: boolean | undefined;
-  image: number | undefined;
+  video: number | undefined;
 }
 
-const Cursor: React.FC<Props> = ({ isActive, image }) => {
+const Cursor: React.FC<Props> = ({ isActive, video }) => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef({
     x: 0,
@@ -37,9 +32,9 @@ const Cursor: React.FC<Props> = ({ isActive, image }) => {
       positionRef.current.yPrev = positionRef.current.y;
     } else {
       positionRef.current.xPrev +=
-        (positionRef.current.x - positionRef.current.xPrev) * 0.08;
+        (positionRef.current.x - positionRef.current.xPrev) * 0.04;
       positionRef.current.yPrev +=
-        (positionRef.current.y - positionRef.current.yPrev) * 0.08;
+        (positionRef.current.y - positionRef.current.yPrev) * 0.04;
     }
     if (cursorRef.current != null) {
       cursorRef.current.style.transform = `translate3d(${positionRef.current.xPrev}px, ${positionRef.current.yPrev}px, 0)`;
@@ -53,7 +48,7 @@ const Cursor: React.FC<Props> = ({ isActive, image }) => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 flex items-center justify-center w-64 h-64 rounded-full pointer-events-none"
+      className="fixed top-0 left-0 flex items-center justify-center rounded-full pointer-events-none w-96 h-96"
     >
       <div className="absolute w-4 h-4 rounded-full top-34 left-34 bg-neutral-50"></div>
       <div
@@ -61,12 +56,11 @@ const Cursor: React.FC<Props> = ({ isActive, image }) => {
           isActive ? "opacity-100" : "opacity-0"
         }`}
       >
-        <Image
+        <video
           className="rounded-full"
-          src={images[image ? image : 0]}
-          layout="fill"
-          objectFit="cover"
-          alt=""
+          src={videos[video ? video : 0]}
+          loop
+          autoPlay
         />
       </div>
     </div>

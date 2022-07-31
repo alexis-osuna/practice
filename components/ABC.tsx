@@ -4,10 +4,10 @@ import animations from "../lib/animations";
 
 interface Props {
   setIsActive: Dispatch<SetStateAction<boolean | undefined>>;
-  setImage: Dispatch<SetStateAction<number | undefined>>;
+  setVideo: Dispatch<SetStateAction<number | undefined>>;
 }
 
-const ABC: React.FC<Props> = ({ setIsActive, setImage }) => {
+const ABC: React.FC<Props> = ({ setIsActive, setVideo }) => {
   return (
     <motion.div
       variants={animations.fadeUp}
@@ -28,7 +28,7 @@ const ABC: React.FC<Props> = ({ setIsActive, setImage }) => {
           key={i}
           className="text-9xl cursor-crosshair mix-blend-exclusion"
           onMouseEnter={() => {
-            setImage(i);
+            setVideo(i);
             setIsActive(true);
           }}
           onMouseLeave={() => setIsActive(false)}
