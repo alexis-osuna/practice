@@ -26,7 +26,7 @@ const ABC: React.FC<Props> = ({ setIsActive, setVideo }) => {
       ].map(({ label }, i) => (
         <p
           key={i}
-          className="text-9xl cursor-crosshair mix-blend-exclusion"
+          className="p-4 text-9xl cursor-crosshair mix-blend-exclusion"
           onMouseEnter={() => {
             setVideo(i);
             setIsActive(true);

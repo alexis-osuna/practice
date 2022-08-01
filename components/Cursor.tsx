@@ -48,20 +48,15 @@ const Cursor: React.FC<Props> = ({ isActive, video }) => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 flex items-center justify-center rounded-full pointer-events-none w-96 h-96"
+      className="fixed top-0 left-0 flex items-center justify-center w-64 h-64 rounded-full pointer-events-none"
     >
-      <div className="absolute w-4 h-4 rounded-full top-34 left-34 bg-neutral-50"></div>
+      <div className="absolute w-4 h-4 bg-white rounded-full top-34 left-34"></div>
       <div
         className={`relative w-full h-full transition-opacity duration-300 ${
           isActive ? "opacity-100" : "opacity-0"
         }`}
       >
-        <video
-          className="rounded-full"
-          src={videos[video ? video : 0]}
-          loop
-          autoPlay
-        />
+        <video src={videos[video ? video : 0]} loop autoPlay />
       </div>
     </div>
   );
