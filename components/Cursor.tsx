@@ -1,6 +1,7 @@
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
-const videos = ["/a.mp4", "/b.mp4", "/c.mp4"];
+const videos = ["/a.gif", "/b.gif", "/c.gif"];
 
 interface Props {
   isActive: boolean | undefined;
@@ -56,7 +57,7 @@ const Cursor: React.FC<Props> = ({ isActive, video }) => {
           isActive ? "opacity-100" : "opacity-0"
         }`}
       >
-        <video src={videos[video ? video : 0]} loop autoPlay />
+        <Image src={videos[video ? video : 0]} layout="fill" />
       </div>
     </div>
   );
