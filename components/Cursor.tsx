@@ -56,7 +56,7 @@ const Cursor: React.FC<Props> = ({ isActive, video }) => {
           isActive ? "opacity-100" : "opacity-0"
         }`}
       >
-        <video src={videos[video ? video : 0]} preload="auto" loop autoPlay />
+        <video src={videos[video ? video : 0]} loop autoPlay />
       </div>
     </div>
   );
