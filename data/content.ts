@@ -1,5 +1,5 @@
 export const content = {
-  pages: ["/", "/page-transitions", "/dynamic-cursor"],
+  pages: ["/", "/page-transitions", "/dynamic-cursor", "/three-octahedron"],
   mugshots: [
     {
       name: "Lindsay Lohan",

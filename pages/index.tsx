@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Alexis Osuna | Practice</title>
       </Head>
-      <Heading text="Front-End exercises using Tailwind and Framer Motion." />
+      <Heading text="Front-End exercises using Framer Motion and React Three Fiber." />
     </>
   );
 };

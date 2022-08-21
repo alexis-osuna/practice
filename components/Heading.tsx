@@ -10,7 +10,7 @@ const Heading: React.FC<Props> = ({ text }) => {
   return (
     <motion.h1
       variants={animations.fadeUp}
-      className="max-w-lg text-3xl font-bold text-center"
+      className="max-w-xl text-3xl font-bold text-center"
     >
       {text}
     </motion.h1>
